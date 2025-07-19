@@ -4,7 +4,6 @@
 - PHP 8.1 or higher
 - Composer
 - Database (MySQL/PostgreSQL)
-- Redis (for caching and queues)
 
 ## Installation Steps
 
@@ -49,9 +48,6 @@ MAIL_HOST=sandbox.smtp.mailtrap.io
 MAIL_PORT=2525
 MAIL_USERNAME=your_mailtrap_username
 MAIL_PASSWORD=your_mailtrap_password
-MAIL_ENCRYPTION=tls
-MAIL_FROM_ADDRESS="noreply@yourapp.com"
-MAIL_FROM_NAME="${APP_NAME}"
 ```
 
 **Note**: Replace `your_mailtrap_username` and `your_mailtrap_password` with the actual credentials from your Mailtrap inbox settings.
