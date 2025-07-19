@@ -4,6 +4,7 @@
 - PHP 8.1 or higher
 - Composer
 - Database (MySQL/PostgreSQL)
+- Redis (for caching and queues)
 
 ## Installation Steps
 
@@ -48,6 +49,9 @@ MAIL_HOST=sandbox.smtp.mailtrap.io
 MAIL_PORT=2525
 MAIL_USERNAME=your_mailtrap_username
 MAIL_PASSWORD=your_mailtrap_password
+MAIL_ENCRYPTION=tls
+MAIL_FROM_ADDRESS="noreply@yourapp.com"
+MAIL_FROM_NAME="${APP_NAME}"
 ```
 
 **Note**: Replace `your_mailtrap_username` and `your_mailtrap_password` with the actual credentials from your Mailtrap inbox settings.
@@ -69,6 +73,12 @@ Start the queue worker to listen for queued jobs:
 ```bash
 php artisan queue:work
 ```
+
+## Login Credentials
+After running the database migrations and seeding, you can log into the application using these default credentials:
+
+- **Username/Email**: `test@example.com`
+- **Password**: `password`
 
 ## Important Notes
 - Keep the queue worker running in a separate terminal to process background jobs
