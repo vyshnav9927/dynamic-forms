@@ -72,4 +72,4 @@ php artisan queue:work
 
 ## Important Notes
 - Keep the queue worker running in a separate terminal to process background jobs
-- Check your Mailtrap inbox to view emails sent by the application during testing
+- Check your Mailtrap inbox to view emails sent by the application during form creation
